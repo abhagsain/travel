@@ -1,0 +1,131 @@
+/*
+COLORS:
+
+Light green: #7ed56f
+Medium green: #55c57a
+Dark green: #28b485
+
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 30px;
+}
+
+.header {
+  height: 90vh;
+  background-image: linear-gradient(to right bottom,
+  rgba(33, 147, 176, 0.267),
+  rgba(109, 213, 237, 0.247)),
+    url(../img/travel.jpg);
+  background-size: cover;
+
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+  position: relative;
+}
+
+.logo-box {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+}
+
+.logo {
+  height: 40px;
+}
+
+.text-box {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.heading {
+  color: white;
+  text-transform: uppercase;
+  font-family: "Lato";
+  backface-visibility: hidden;
+  line-height: 60px;
+}
+
+.heading-primary {
+  display: block;
+  font-size: 4rem;
+  letter-spacing: 1rem;
+  font-weight: 500;
+  animation: moveRight 0.5s ease-out;
+}
+
+.heading-secondary {
+  display: block;
+  letter-spacing: 0.67rem;
+  font-weight: 400;
+  animation: moveLeft 0.5s ease-out;
+}
+
+/* Animation */
+@keyframes moveRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+
+  80% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+
+  80% {
+    transform: translateX(-10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.btn:link,
+.btn:visited {
+  text-decoration: none;
+  padding: 15px 40px;
+  text-transform: uppercase;
+  color: #777;
+  border-radius: 100px;
+  display: inline-block;
+  font-family: "Lato";
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.322);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.322);
+}
+
+.btn-white {
+  background: #fff;
+}
